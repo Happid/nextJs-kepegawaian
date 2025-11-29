@@ -1,5 +1,15 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## This app deploy at vercel 
+https://next-js-kepegawaian.vercel.app/login
+
+## Backend and DB deloy using Railway
+https://nestjs-kepegawaian-production.up.railway.app/api-docs
+
+## Credential for login
+email: admin@mail.com
+password: 123456
+
 ## Running App
 
 ```bash
