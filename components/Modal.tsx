@@ -28,7 +28,7 @@ const schema = z.object({
   namaBelakang: z.string().min(1, "Nama Belakang wajib diisi"),
   email: z.string().email("Format email tidak valid"),
   tanggalLahir: z.string().min(1, "Tanggal Lahir wajib diisi"),
-  jenisKelamin: z.enum(["pria", "perempuan"], "Jenis Kelamin wajib dipilih"),
+  jenisKelamin: z.union([z.enum(["pria", "perempuan"]), z.literal("")]),
 });
 
 type FormData = z.infer<typeof schema>;

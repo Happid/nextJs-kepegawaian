@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const axiosClient = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: "https://nestjs-kepegawaian-production.up.railway.app",
   headers: {
     "Content-Type": "application/json",
   },
@@ -13,7 +13,7 @@ export const axiosClientWithAuth = () => {
   const token = localStorage.getItem("token");
   if (token) {
     return axios.create({
-      baseURL: "http://localhost:3000",
+      baseURL: "https://nestjs-kepegawaian-production.up.railway.app",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,

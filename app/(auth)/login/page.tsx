@@ -6,6 +6,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Toast from "@/components/Toast";
+import { axiosClientWithAuth } from "@/libs/axiosClient";
 
 const loginSchema = z.object({
   email: z.string().email("Format email tidak valid"),
@@ -34,7 +35,8 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("/api/auth/login", data);
+      const client = axiosClientWithAuth();
+      const response = await client.post("auth/login", data);
       localStorage.setItem("adminId", response.data.admin.id);
       localStorage.setItem("token", response.data.token);
       router.push("/admin");

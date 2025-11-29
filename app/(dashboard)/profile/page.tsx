@@ -9,7 +9,7 @@ const schema = z.object({
   namaDepan: z.string().min(1, "Nama Depan wajib diisi"),
   namaBelakang: z.string().min(1, "Nama Belakang wajib diisi"),
   email: z.string().email("Format email tidak valid"),
-  jenisKelamin: z.enum(["pria", "perempuan"], "Jenis Kelamin wajib dipilih"),
+  jenisKelamin: z.union([z.enum(["pria", "perempuan"]), z.literal("")]),
   tanggalLahir: z.string(),
   password: z.string(),
 });
