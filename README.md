@@ -20,8 +20,4 @@ npm i axios
 npm install react-hook-form @hookform/resolvers zod
 ```
 
-```bash
-npm i js-cookie
-```
-
 
